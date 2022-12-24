@@ -37,5 +37,5 @@ class HandleRequests(BaseHTTPRequestHandler):
         # except:
         #     self._set_headers()
         #     self.wfile.write("error".encode())
-httpd = HTTPServer(('localhost', 8080), BaseHTTPRequestHandler)
+httpd = HTTPServer(('localhost', 8080), HandleRequests)
 httpd.serve_forever()
