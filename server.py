@@ -12,7 +12,7 @@
     # res = ocr.classification(image)
     # return res.upper()  # response to your request.
 
-from http.server import BaseHTTPRequestHandler, HTTPServer # python3
+from http.server import BaseHTTPRequestHandler
 import ddddocr
 import requests
 from urllib.parse import urlparse
@@ -37,8 +37,3 @@ class HandleRequests(BaseHTTPRequestHandler):
         # except:
         #     self._set_headers()
         #     self.wfile.write("error".encode())
-
-host = ''
-port = 80
-HTTPServer((host, port), HandleRequests).serve_forever()
-print("serving...")
